@@ -14,7 +14,8 @@ driver = webdriver.Chrome(service=service_obj)
 driver.get("https://opensource-demo.orangehrmlive.com/")
 driver.implicitly_wait(5)
 # 3) Enter username (Admin).
-driver.find_element(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[2]/input[1]').send_keys('Admin')
+# driver.find_element(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[2]/input[1]').send_keys('Admin')
+driver.find_element(By.NAME, "username").send_keys('Admin')
 
 # 4) Enter password (adnini23).
 driver.find_element(By.XPATH, "(//input[@placeholder='Password'])[1]").send_keys('admin123')
